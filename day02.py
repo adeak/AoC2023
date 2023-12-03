@@ -2,7 +2,7 @@ from collections import defaultdict
 import math
 
 
-def day02(inp, part2=False):
+def day02(inp):
     lines = inp.strip().splitlines()
 
     cube_limits = {'r': 12, 'g': 13, 'b': 14}
