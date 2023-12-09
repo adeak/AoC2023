@@ -22,11 +22,7 @@ def day09(inp):
         part1 += sum(tails)
 
         # part 2
-        heads = heads[::-1]
-        value = heads[0]
-        for head in heads[1:]:
-            value = head - value
-        part2 += value
+        part2 += sum(head * (-1)**i for i, head in enumerate(heads))
 
     return part1, part2
 
