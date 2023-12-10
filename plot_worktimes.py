@@ -25,7 +25,7 @@ def plot_times():
                     endline = f.readline()
         timelines = startlines + [endline]
 
-        times = [datetime.strptime(timeline.strip(), '%a %d %b %X %Z %Y') for timeline in timelines]
+        times = [datetime.strptime(timeline.strip(), '%a %d %b %X CET %Y') for timeline in timelines]
         intervals = zip(times[::2], times[1::2])  # normally a single [from, to] interval
         delta = 0
         for fr, to in intervals:
